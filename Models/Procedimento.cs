@@ -43,7 +43,7 @@ namespace Models
                 + $"\n - Descricao: {this.Descricao}."
                 + $"\n - Preco: ${this.Preco}"
                 + $"\n - ID do agendamento: {this.Agendamento.Id}"
-                + $"\n - Data do agendamento: {this.Agendamento.Date}";
+                + $"\n - Data do agendamento: {this.Agendamento.Data}";
         }
 
         // Equals - Procedimento

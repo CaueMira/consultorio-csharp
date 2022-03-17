@@ -15,7 +15,7 @@ namespace Views
             Console.WriteLine("Informe a ID do agendamento associado com esse Procedimento: ");
             int AgendamentoID = Convert.ToInt32(Console.ReadLine());
 
-            ProcedureController.CriarProcedimento(Descricao, Preco, AgendamentoID);
+            ProcedimentoController.CriarProcedimento(Descricao, Preco, AgendamentoID);
         }
 
         public static void UpdateProcedimento()

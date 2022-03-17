@@ -116,7 +116,7 @@ namespace Controllers
         {
             try
             {
-                Paciente paciente = GetPatient(Id);
+                Paciente paciente = GetPaciente(Id);
                 Paciente.RemovePaciente(paciente);
                 return paciente;
             }

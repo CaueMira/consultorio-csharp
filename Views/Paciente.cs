@@ -108,7 +108,7 @@ namespace Views
 
         public static void GetAllPacientes()
         {
-            foreach (Paciente paciente in PacientesController.GetAllPacientes())
+            foreach (Paciente paciente in PacienteController.GetAllPacientes())
             {
                 Console.WriteLine(paciente);
             }

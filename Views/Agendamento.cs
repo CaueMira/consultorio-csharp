@@ -4,7 +4,7 @@ using Controllers;
 
 namespace Views
 {
-    public class AgendamentoViewView
+    public class AgendamentoView
     {
         public static void CriarAgendamento()
         {
@@ -111,7 +111,7 @@ namespace Views
             AgendamentoController.DeleteAgendamento(Id);
         }
 
-        public static void GetPatientAgendamento(int PacienteID)
+        public static void GetPacienteAgendamento(int PacienteID)
         {
             foreach (Agendamento agendamento in AgendamentoController.GetAgendamentoByPaciente(PacienteID))
             {

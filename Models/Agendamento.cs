@@ -11,7 +11,7 @@ namespace Models
         public int Id { set; get; }
         public int PacienteId { set; get; }
         public Paciente Paciente { get; }
-        public int DentistaaId { set; get; }
+        public int DentistaId { set; get; }
         public Dentista Dentista { set; get; }
         public int SalaId { set; get; }
         public Sala Sala { get; }
@@ -30,7 +30,7 @@ namespace Models
         {
             this.Id = Id;
             this.PacienteId = PacienteId;
-            this.DentistaaId = DentistaaId;
+            this.DentistaId = DentistaaId;
             this.SalaId = SalaId;
 
             this.Data = Data;
@@ -47,7 +47,7 @@ namespace Models
             // Calculando o preço a pagar.
             double totalPrice = 0;
 
-            string Sala = $"ID: {this.Id}"
+            string printAgendamento = $"ID: {this.Id}"
                 + $"\n - Paciente: {this.Paciente.Nome}"
                 + $"\n - Dentista: {this.Dentista.Nome}"
                 + $"\n - Sala: {this.Sala.Numero}"

@@ -26,7 +26,7 @@ namespace Controllers
                 throw new Exception("Preço inválido.");
             }
             
-            SchedullerController.GetAgendamento(AgendamentoId);
+            AgendamentoController.GetAgendamento(AgendamentoId);
 
             return new Procedimento(Descricao, Preco, AgendamentoId);
         }

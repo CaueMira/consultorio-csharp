@@ -4,7 +4,7 @@ using Models;
 
 namespace Views
 {
-    public class View
+    public class SalaView
     {
         public static void CriarSala()
         {
@@ -13,7 +13,7 @@ namespace Views
             Console.WriteLine("Informe os equipamentos da sala: ");
             string Equipamentos = Console.ReadLine();
 
-            RoomController.CriarSala(
+            SalaController.CriarSala(
                 Numero,
                 Equipamentos
             );

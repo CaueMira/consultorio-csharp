@@ -31,14 +31,14 @@ namespace Models
             }
         }
 
-        public static void DentistLogin(string Email, string Senha)
+        public static void DentistaLogin(string Email, string Senha)
         {
             // Conferindo se o dentista está na lista de dentistas, e procurando o dentista com o mesmo Email e senha.
             Dentista dentista = Dentista.GetDentistas()
                 .Find(Dentista => Dentista.Email == Email && BCrypt.Net.BCrypt.Verify(Senha, Dentista.Senha));
         
 
-            if (dentist != null)
+            if (dentista != null)
             {
                 IsLogeed = true;
                 Dentista = dentista;

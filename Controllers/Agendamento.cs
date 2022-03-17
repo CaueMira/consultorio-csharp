@@ -36,7 +36,7 @@ namespace Controllers
         private static bool GetAgendamentoConflict(
             int AtualId,
             int DentistaId,
-            int SalaIdId,
+            int SalaId,
             DateTime Data
         )
         {

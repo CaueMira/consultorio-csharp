@@ -62,7 +62,7 @@ namespace Controllers
         // Get todas as salas
         public static List<Sala> GetAllSalas()
         {
-            return Salas.GetSalas();
+            return Sala.GetSalas();
         }
 
         // Get Salas por id.

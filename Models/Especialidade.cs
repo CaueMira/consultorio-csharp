@@ -64,7 +64,7 @@ namespace Models
         public static void RemoveEspecialidade(Especialidade especialidade)
         {
             Context db = new Context();
-            db.Specialities.Remove(especialidade);
+            db.Especialidades.Remove(especialidade);
         }
     }
 }
