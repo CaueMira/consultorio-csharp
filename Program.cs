@@ -1,5 +1,5 @@
 using System;
-using Visualizars;
+using Views;
 using Controllers;
 using Models;
 
@@ -44,8 +44,8 @@ namespace ConsultorioOdontologico
 
         public static void Main(string[] args)
         {
-            //EspecialidadeController.CriarEspecialidade("Clinico Geral", "O Dentistaa clínico geral é geralmente o primeiro profissional odontológico a entrar em contato com o paciente");
-            //DentistaaController.CriarDentistaa("Caue Mira", "111.111.111-11", "47 99999-9999", "caue.mira@Dentistaa.com", "123456", "12345/SC", 15000, 1);
+            EspecialidadeController.CriarEspecialidade("Clinico Geral", "O Dentistaa clínico geral é geralmente o primeiro profissional odontológico a entrar em contato com o paciente");
+            DentistaController.CriarDentista("Caue Mira", "111.111.111-11", "47 99999-9999", "caue.mira@dentista.com", "123456", "12345/SC", 15000, 1);
             //PacienteController.CriarPaciente("Jose Carlos", "111.111.111-11", "47 88888-8888", "jose.carlos@paciente.com", "123456", Convert.ToDateTime("1990-01-01"));
             //SalaController.CriarSala("B135", "RaioX");
             //AgendamentoController.Cr1, 1, 1, Convert.ToDateTime("2022-04-05"));
@@ -61,7 +61,7 @@ namespace ConsultorioOdontologico
                 
                 try
                 {
-                    Autenticacao.DentistaaLogin(Email, Senha);
+                    Autenticacao.DentistaLogin(Email, Senha);
                     if (Autenticacao.Dentista != null)
                     {
                         PrincipalMenu();
@@ -115,10 +115,10 @@ namespace ConsultorioOdontologico
                         Console.WriteLine("Volte sempre!");
                         break;
                     case 1:
-                        AgendamentoVisualizar.GetPacienteAgendamento(Autenticacao.Paciente.Id);
+                        AgendamentoView.GetPacienteAgendamento(Autenticacao.Paciente.Id);
                         break;
                     case 2:
-                        AgendamentoVisualizar.ConfirmAgendamento();
+                        AgendamentoView.ConfirmAgendamento();
                         break;
                     default:
                         Console.WriteLine("Operação inválida");
@@ -183,122 +183,122 @@ namespace ConsultorioOdontologico
                         }
                         case 1:
                         {
-                            DentistaVisualizar.CriarDentista();
+                            DentistaView.CriarDentista();
                             break;
                         }
                         case 2:
                         {
-                            PacienteVisualizar.CriarPaciente();
+                            PacienteView.CriarPaciente();
                             break;
                         }
                         case 3:
                         {
-                            SalaVisualizar.CriarSala();
+                            SalaView.CriarSala();
                             break;
                         }
                         case 4:
                         {
-                            AgendamentoVisualizar.CriarAgendamento();
+                            AgendamentoView.CriarAgendamento();
                             break;
                         }
                         case 5:
                         {
-                            ProcedimentoVisualizar.CriarProcedimento();
+                            ProcedimentoView.CriarProcedimento();
                             break;
                         }
                         case 6:
                         {
-                            EspecialidadeVisualizar.CriarEspecialidade();
+                            EspecialidadeView.CriarEspecialidade();
                             break;
                         }
                         case 7:
                         {
-                            DentistaVisualizar.AtualizarDentista();
+                            DentistaView.UpdateDentista();
                             break;
                         }
                         case 8:
                         {
-                            PacienteVisualizar.AtualizarPaciente();
+                            PacienteView.UpdatePaciente();
                             break;
                         }
                         case 9:
                         {
-                            SalaVisualizar.AtualizarSala();
+                            SalaView.UpdateSala();
                             break;
                         }
                         case 10:
                         {
-                            AgendamentoVisualizar.AtualizarAgendamento();
+                            AgendamentoView.UpdateAgendamento();
                             break;
                         }
                         case 11:
                         {
-                            ProcedimentoVisualizar.AtualizarProcedimento();
+                            ProcedimentoView.UpdateProcedimento();
                             break;
                         }
                         case 12:
                         {
-                            EspecialidadeVisualizar.AtualizarEspecialidade();
+                            EspecialidadeView.UpdateEspecialidade();
                             break;
                         }
                         case 13:
                         {
-                            DentistaVisualizar.RemoverDentista();
+                            DentistaView.DeleteDentista();
                             break;
                         }
                         case 14:
                         {
-                            PacienteVisualizar.RemoverPatiet();
+                            PacienteView.DeletePaciente();
                             break;
                         }
                         case 15:
                         {
-                            SalaVisualizar.RemoverSala();
+                            SalaView.DeleteSala();
                             break;
                         }
                         case 16:
                         {
-                            AgendamentoVisualizar.RemoverAgendamento();
+                            AgendamentoView.DeleteAgendamento();
                             break;
                         }
                         case 17:
                         {
-                            ProcedimentoVisualizar.RemoverProcedimento();
+                            ProcedimentoView.DeleteProcedimento();
                             break;
                         }
                         case 18:
                         {
-                            EspecialidadeVisualizar.RemoverSpeciliaty();
+                            EspecialidadeView.DeleteEspecialidade();
                             break;
                         }
                         case 19:
                         {
-                            DentistaVisualizar.GetAllDentistas();
+                            DentistaView.GetAllDentistas();
                             break;
                         }
                         case 20:
                         {
-                            PacienteVisualizar.GetAllPacientes();
+                            PacienteView.GetAllPacientes();
                             break;
                         }
                         case 21:
                         {
-                            SalaVisualizar.GetAllSalas();
+                            SalaView.GetAllSalas();
                             break;
                         }
                         case 22:
                         {
-                            AgendamentoVisualizar.GetAllAgendamentos();
+                            AgendamentoView.GetAllAgendamentos();
                             break;
                         }
                         case 23:
                         {
-                            ProcedimentoVisualizar.GetAllProcedimentos();
+                            ProcedimentoView.GetAllProcedimentos();
                             break;
                         }
                         case 24:
                         {
-                            EspecialidadeVisualizar.GetAllSpecialities();
+                            EspecialidadeView.GetAllEspecialidades();
                             break;
                         }
                         default:
